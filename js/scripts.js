@@ -14,4 +14,8 @@ var removeSpacesAndConcatenate = function (text) {
 	return text
 }
 
+var singleCharacterArray = function (text) {
+	text = text.split("");
+	return text
+}
 
