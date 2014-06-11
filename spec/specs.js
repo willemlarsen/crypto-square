@@ -9,10 +9,14 @@ describe('cryptoSquare', function() {
 		removeSpacesAndConcatenate('have a happy day').should.equal("haveahappyday");
 	})
 	it('takes a block of text and turns into an array of single characters', function() {
-		singleCharacterArray('haveahappyday').should.eql(['h', 'a', 'v', 'e', 'a', 'h', 'a', 'p', 'p', 'y','d', 'a', 'y'])
+		singleCharacterArray('haveahappyday').should.eql(['h', 'a', 'v', 'e', 'a', 'h', 'a', 'p', 'p', 'y','d', 'a', 'y']);
 	});
 	it('measures the length of an array of single characters, and generates the length of the sides of the closest square', function () {
-		newArraySides(['h', 'a', 'v', 'e', 'a', 'h', 'a', 'p', 'p', 'y','d', 'a', 'y']).should.eql(4)
+		newArraySides(['h', 'a', 'v', 'e', 'a', 'h', 'a', 'p', 'p', 'y','d', 'a', 'y']).should.equal(4);
+	})
+	it('populates an array comprised of characters from the text string, whose length is equal to the length of the sides of the square', function() {
+		rowOne(['h', 'a', 'v', 'e', 'a', 'h', 'a', 'p', 'p', 'y','d', 'a', 'y']).should.eql(['h', 'a', 'v', 'e']);
+
 	})
 });
 

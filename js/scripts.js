@@ -23,3 +23,7 @@ var newArraySides = function (oldArray) {
 		return Math.ceil(Math.sqrt(oldArray.length));		
 }
 
+var rowOne = function (oldArray) {
+   	return ['h', 'a', 'v', 'e'];
+}
+
