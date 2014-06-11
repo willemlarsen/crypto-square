@@ -11,5 +11,8 @@ describe('cryptoSquare', function() {
 	it('takes a block of text and turns into an array of single characters', function() {
 		singleCharacterArray('haveahappyday').should.eql(['h', 'a', 'v', 'e', 'a', 'h', 'a', 'p', 'p', 'y','d', 'a', 'y'])
 	});
+	it('measures the length of an array of single characters, and generates the length of the sides of the closest square', function () {
+		newArraySides(['h', 'a', 'v', 'e', 'a', 'h', 'a', 'p', 'p', 'y','d', 'a', 'y']).should.eql(4)
+	})
 });
 

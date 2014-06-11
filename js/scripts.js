@@ -19,3 +19,7 @@ var singleCharacterArray = function (text) {
 	return text
 }
 
+var newArraySides = function (oldArray) {
+		return Math.ceil(Math.sqrt(oldArray.length));		
+}
+
