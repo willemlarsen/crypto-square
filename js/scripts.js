@@ -28,3 +28,17 @@ var encrypt = function(string) {
 	}
 	return blocks(newSentence);
 }
+
+$(document).ready(function() {
+	$('form#crypto-text').submit(function(event) {
+		var rawText = $('input#raw-text').val();
+
+		var encryptedText = encrypt(rawText);
+
+		$('#encrypted-text').text(encryptedText);
+		$('.result').show();
+
+		event.preventDefault();
+	});
+});
+
