@@ -1,34 +1,21 @@
 
-var convertTextToLowerCase = function (text) {
-	return text.toLowerCase();
+var prepareText = function(text) {
+	var downcasedText = text.toLowerCase();
+	var searchAndRemove = /[,.!?;'":><%$&*@#1234567890 ]/g;
+	return downcasedText.replace(/[,.!?;'":><%$&*@#1234567890 ]/g,"");
 };
 
-var removePunctuation = function (text) {
-	text = text.replace(/[\.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"");
-	text = text.replace(/\s{2, 100}/g, " ");
-	return text;
-}
 
-var removeSpacesAndConcatenate = function (text) {
-	text = text.replace(/ /g, "");
-	return text;
-}
 
-var singleCharacterArray = function (text) {
-	text = text.split("");
-	return text;
-}
+var getLength = function (string) {
+		return string.length;		
+};
 
-var newArraySides = function (oldArray) {
-		return Math.ceil(Math.sqrt(oldArray.length));		
-}
+var findRows = function(string) {
+	return Math.floor(Math.sqrt(string.length));
+};
 
-var rowOne = function (array) {
-    var newArraySides = function (array) {
-		return Math.ceil(Math.sqrt(array.length));		
-}
-   	var newArray = array.slice(0, 4);
-    return newArray;
-}
-
+var findColumns = function(string) {
+	return Math.ceil(Math.sqrt(string.length));
+};
 
