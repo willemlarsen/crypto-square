@@ -2,7 +2,7 @@
 var prepareText = function(text) {
 	var downcasedText = text.toLowerCase();
 	var searchAndRemove = /[,.!?;'":><%$&*@#1234567890 ]/g;
-	return downcasedText.replace(/[,.!?;'":><%$&*@#1234567890 ]/g,"");
+	return downcasedText.replace(searchAndRemove,"");
 };
 
 
